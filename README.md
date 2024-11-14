@@ -62,7 +62,7 @@ Here are some SQL queries you can run against the `sales_data.db` to validate th
    SELECT AVG(total_sales) AS average_sales_amount FROM sales_data;
 4. **Ensure there are no duplicate id values:**:
    ```sql
-   SELECT id, COUNT(*) FROM sales_data GROUP BY id HAVING COUNT(*) > 1;
+   SELECT orderid, COUNT(*) FROM sales_data GROUP BY orderid HAVING COUNT(*) > 1;
 
 ## Assumptions & Decisions
 - **CSV File Structure**: The CSV files are expected to follow the format shown in the problem statement.
